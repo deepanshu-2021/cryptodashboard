@@ -114,17 +114,21 @@ body {
 .data-table tbody tr:hover {
   background-color: #093347; /* Slightly lighter blue for hover effect */
 }
+
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center align items */
   }
+
   .logo {
     display: flex;
     justify-content: center; /* Center the logo */
     width: 100%; /* Take full width to ensure center alignment */
     margin-bottom: 10px; /* Optional: Add spacing below the logo */
   }
+
   .nav-center {
     display: flex;
     justify-content: center; /* Center align items within nav-center */
@@ -133,8 +137,25 @@ body {
     margin-top: 10px;
   }
 
+  .dropdown-content {
+    position: static; /* Change the dropdown to be in-line */
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #0077b6;
+  }
+
   .connect-btn {
     margin-left: 0; /* Center the button without extra left margin */
     margin-top: 10px; /* Optional: Add spacing if needed */
+  }
+
+  .dropdown-content a {
+    text-align: center; /* Align the text in dropdown options */
+    padding: 10px;
+  }
+
+  .dropdown {
+    width: 100%; /* Ensure dropdown takes full width */
+    text-align: center;
   }
 }
