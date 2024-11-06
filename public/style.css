@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #012234; /* Blue background matching navbar and table */
+  color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #012234;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: lightblue;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.nav-center {
+  display: flex;
+  gap: 15px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #012234;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #0077b6;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e0f7fa;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.action-button,
+.connect-btn {
+  background-color: rgb(124, 168, 184);
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 4px;
+}
+
+.connect-btn {
+  margin-left: auto;
+}
+
+/* Table Styles */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #012234; /* Unified color for table */
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #012234;
+  background-color: #012234; /* Set same color for all cells */
+  color: #fff;
+}
+
+.data-table tbody tr:hover {
+  background-color: #093347; /* Slightly lighter blue for hover effect */
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+  .logo {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    width: 100%; /* Take full width to ensure center alignment */
+    margin-bottom: 10px; /* Optional: Add spacing below the logo */
+  }
+  .nav-center {
+    display: flex;
+    justify-content: center; /* Center align items within nav-center */
+    gap: 50px;
+    width: 100%; /* Optional: Full width for the dropdowns */
+    margin-top: 10px;
+  }
+
+  .connect-btn {
+    margin-left: 0; /* Center the button without extra left margin */
+    margin-top: 10px; /* Optional: Add spacing if needed */
+  }
+}

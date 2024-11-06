@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">HODLINFO</div>
+      <div class="nav-center">
+        <div class="dropdown">
+          <button id="dropdown1-btn" class="dropbtn">INR</button>
+          <div id="dropdown1-content" class="dropdown-content">
+            <!-- Options will be populated here -->
+          </div>
+        </div>
+        <section class="dropdown">
+          <button id="dropdown2-btn" class="dropbtn">Base Unit</button>
+          <div id="dropdown2-content" class="dropdown-content">
+            <!-- Options will be populated here -->
+          </div>
+        </section>
+
+        <a href="https://wazirx.com/signup" target="_blank"
+          ><button id="action-button" class="action-button">Buy</button></a
+        >
+      </div>
+      <button class="connect-btn">Connect Telegram</button>
+    </nav>
+
+    <!-- Data Table -->
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Last Price</th>
+            <th>Buy</th>
+            <th>Sell</th>
+            <th>Volume</th>
+            <th>Base Unit</th>
+          </tr>
+        </thead>
+        <tbody id="data-table-body"></tbody>
+      </table>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
