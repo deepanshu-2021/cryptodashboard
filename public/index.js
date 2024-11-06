@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inrOption.addEventListener("click", () => {
       selectedOption1 = "INR"; // Set selectedOption1 to INR
       dropdown1Btn.innerHTML = "INR"; // Update the button text
+      dropdown1Content.style.display='none';
     });
     dropdown1Content.appendChild(inrOption);
 
@@ -47,13 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedOption2 = baseUnit; // Set selectedOption2 to selected base unit
         actionButton.innerHTML = `Buy ${selectedOption2}`; // update buy button
         dropdown2Btn.innerHTML = baseUnit; // Update the button text
+        dropdown2Content.style.display='none';
       });
       dropdown2Content.appendChild(baseUnitOption);
     });
 
     // Set default values after populating
     dropdown1Btn.innerHTML = selectedOption1; // Ensure dropdown-1 has the correct default option
-    dropdown2Btn.innerHTML = selectedOption2 || "Select Base Unit"; // Set a default or placeholder for dropdown-2
+    dropdown2Btn.innerHTML = selectedOption2 || "Select Base "; // Set a default or placeholder for dropdown-2
   };
 
   // Function to fetch data from API and populate the HTML
