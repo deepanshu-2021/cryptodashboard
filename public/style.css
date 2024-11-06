@@ -114,48 +114,64 @@ body {
 .data-table tbody tr:hover {
   background-color: #093347; /* Slightly lighter blue for hover effect */
 }
-
-/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center align items */
+    padding: 10px; /* Add padding to ensure the navbar isn't too close to the edges */
   }
 
   .logo {
-    display: flex;
-    justify-content: center; /* Center the logo */
-    width: 100%; /* Take full width to ensure center alignment */
-    margin-bottom: 10px; /* Optional: Add spacing below the logo */
+    font-size: 2em; /* Keep the logo size moderate */
+    margin-bottom: 10px; /* Space between the logo and the nav items */
   }
 
   .nav-center {
     display: flex;
     justify-content: center; /* Center align items within nav-center */
-    gap: 50px;
-    width: 100%; /* Optional: Full width for the dropdowns */
-    margin-top: 10px;
-  }
-
-  .dropdown-content {
-    position: static; /* Change the dropdown to be in-line */
-    width: 100%;
-    box-shadow: none;
-    border: 1px solid #0077b6;
-  }
-
-  .connect-btn {
-    margin-left: 0; /* Center the button without extra left margin */
-    margin-top: 10px; /* Optional: Add spacing if needed */
-  }
-
-  .dropdown-content a {
-    text-align: center; /* Align the text in dropdown options */
-    padding: 10px;
+    gap: 20px; /* Adjust gap between nav items */
   }
 
   .dropdown {
-    width: 100%; /* Ensure dropdown takes full width */
-    text-align: center;
+    position: relative;
+    width: auto; /* Let the dropdown take its natural width */
+  }
+
+  .dropdown-content {
+    min-width: 120px; /* Reduced minimum width of the dropdown */
+    position: absolute;
+    top: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .action-button,
+  .connect-btn {
+    padding: 6px 10px; /* Reduce padding to make buttons smaller */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin-top: 10px; /* Add spacing between buttons */
+  }
+
+  /* Make sure the table is still responsive, but not full width */
+  .table-container {
+    width: auto;
+    margin-top: 20px;
+    overflow-x: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .data-table {
+    width: auto; /* Make table width auto instead of 100% */
+    margin: 0 auto; /* Center the table */
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 12px; /* Smaller padding for table cells */
+  }
+
+  .connect-btn {
+    margin-left: 0; /* Center the button */
   }
 }
